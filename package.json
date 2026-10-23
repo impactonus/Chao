@@ -1,0 +1,41 @@
+{
+  "name": "chao",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/dev.js",
+    "dev:web": "vite --host 0.0.0.0",
+    "start": "node server/index.js",
+    "build": "vite build",
+    "test": "node --test tests/*.test.js",
+    "mobile:sync": "npm run build && cap sync",
+    "mobile:android": "cap open android",
+    "mobile:ios": "cap open ios",
+    "test:e2e": "playwright test",
+    "format": "prettier --write src server tests *.js *.json README.md index.html"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor/ios": "^7.4.0",
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.0",
+    "@playwright/test": "^1.64.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "prettier": "^3.9.10",
+    "vite": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

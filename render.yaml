@@ -1,0 +1,18 @@
+# Browser-accessible test deployment. Demo data is intentionally ephemeral.
+services:
+  - type: web
+    name: chao-demo
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: NODE_ENV
+        value: production
+      - key: CHAO_DEMO
+        value: "1"
+      - key: DATA_DIR
+        value: /tmp/chao-demo

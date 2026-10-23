@@ -1,0 +1,15 @@
+node_modules/
+dist/
+data/
+.env
+*.log
+android/.gradle/
+android/local.properties
+android/app/build/
+android/build/
+ios/App/Pods/
+ios/App/build/
+test-results/
+playwright-report/
+*.jks
+*.keystore
